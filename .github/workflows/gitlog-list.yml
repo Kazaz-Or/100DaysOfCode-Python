@@ -1,9 +1,12 @@
 name: 'get git log'
 description: 'Get git log list of commits and pull requests that are merged into the repository'
-inputs:
-  date:
-    description: 'enter date'
-    required: false
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Enter Date'
+        required: false
 outputs:
   log:
     description: 'git log'

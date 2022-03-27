@@ -1,6 +1,7 @@
 import random
 import pyperclip
 import tkinter
+import json
 from tkinter import END
 from tkinter import messagebox
 
@@ -24,19 +25,30 @@ def save():
     website = website_entry.get()
     email = email_entry.get()
     psw = pass_entry.get()
+    new_data = {website: {
+        "email": email,
+        "password": psw,
+    }}
 
     if len(website) == 0 or len(email) == 0 or len(psw) == 0:
         messagebox.showinfo(title="Note", message="Please make sure you haven't left any fields empty")
     else:
-        is_ok = messagebox.askokcancel(title=website,
-                                       message=f"These are the details: \nWebsite: {website} \nEmail: {email} \nPassword: {psw} \nWould you like to save?")
+        try:
+            with open("data.json", "r") as data_file:
+                data = json.load(data_file)
+                data.update(new_data)
+        except FileNotFoundError:
+            with open("data.json", "w") as data_file:
+                json.dump(new_data, data_file, indent=4)
+        else:
+            data.update(new_data)
 
-        if is_ok:
-            with open("data.txt", "a") as data_file:
-                data_file.write(f"{website} | {email} | {psw}\n")
-                website_entry.delete(0, END)
-                email_entry.delete(0, END)
-                pass_entry.delete(0, END)
+            with open("data.json", "w") as data_file:
+                json.dump(data, data_file, indent=4)
+        finally:
+            website_entry.delete(0, END)
+            email_entry.delete(0, END)
+            pass_entry.delete(0, END)
 
 
 window = tkinter.Tk()

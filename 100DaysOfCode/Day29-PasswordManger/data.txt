@@ -1,0 +1,4 @@
+www.test.com | testuser | testpass
+test2 | test2 | test
+535NameError | NameError | erewrewr
+www.test.co.il | blabla@bla.com | ms3+iGcjL(2U5Bi7

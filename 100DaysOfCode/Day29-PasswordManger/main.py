@@ -51,6 +51,22 @@ def save():
             pass_entry.delete(0, END)
 
 
+def find():
+    website = website_entry.get()
+    try:
+        with open("data.json") as data_file:
+            data = json.load(data_file)
+    except FileNotFoundError:
+        messagebox.showinfo(title="Error", message="No data file found")
+    else:
+        if website in data:
+            email = data[website]["email"]
+            password = data[website]["password"]
+            messagebox.showinfo(title=website, message=f"Email: {email}\n Password: {password}")
+        else:
+            messagebox.showinfo(title="Error", message=f"No details for {website} exists.")
+
+
 window = tkinter.Tk()
 window.title("Password Manager")
 window.config(padx=50, pady=50)
@@ -67,8 +83,8 @@ email_label.grid(row=2, column=0)
 pass_label = tkinter.Label(text="Password:")
 pass_label.grid(row=3, column=0)
 
-website_entry = tkinter.Entry(width=35)
-website_entry.grid(row=1, column=1, columnspan=2)
+website_entry = tkinter.Entry(width=21)
+website_entry.grid(row=1, column=1)
 website_entry.focus()
 email_entry = tkinter.Entry(width=35)
 email_entry.grid(row=2, column=1, columnspan=2)
@@ -79,5 +95,7 @@ generate_pass_button = tkinter.Button(text="Generate Password", command=generate
 generate_pass_button.grid(row=3, column=2)
 add_button = tkinter.Button(text="Add", width=36, command=save)
 add_button.grid(row=4, column=1, columnspan=2)
+search_button = tkinter.Button(text="Search", width=13, command=find)
+search_button.grid(row=1, column=2)
 
 window.mainloop()

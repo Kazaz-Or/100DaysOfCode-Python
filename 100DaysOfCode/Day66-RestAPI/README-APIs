@@ -1,0 +1,33 @@
+Get all cafes -
+curl --location --request GET 'localhost:5000/all'
+
+Get random cafe -
+curl --location --request GET 'localhost:5000/random'
+
+Get cafes by location -
+curl --location --request GET 'localhost:5000/search?loc=Hackney'
+
+Add (POST) new cafe -
+curl --location --request POST 'localhost:5000/add?api-key=TopSecretAPIKey' \
+--data-urlencode 'name=Aurum Restaurant & cafe
+
+' \
+--data-urlencode 'map_url=https://goo.gl/maps/5YRkViHhybvQZvDG8' \
+--data-urlencode 'img_url=https://www.google.com/maps/place/Aurum+Restaurant+%26+cafe/@25.035443,55.1469002,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipMidhxGRhP9O7O0J3OuhEd9EXUDKpSFLxwxrByU!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMidhxGRhP9O7O0J3OuhEd9EXUDKpSFLxwxrByU%3Dw114-h86-k-no!7i4032!8i3024!4m8!1m2!2m1!1scafe+near+to+me!3m4!1s0x3e5f6d70dc70050b:0xe1c69a9334054328!8m2!3d25.0353341!4d55.1468203' \
+--data-urlencode 'loc=Dubai' \
+--data-urlencode 'sockets=1' \
+--data-urlencode 'toilet=1' \
+--data-urlencode 'wifi=1' \
+--data-urlencode 'calls=0' \
+--data-urlencode 'seats=25' \
+--data-urlencode 'coffee_price=$5'
+
+Update (PATCH) coffee price for cafe -
+curl --location --request PATCH 'localhost:5000/update-price/22?new_price=10&api-key=TopSecretAPIKey'
+
+Delete cafe by id -
+curl --location --request DELETE 'localhost:5000/report-closed/22?api-key=TopSecretAPIKey'
+
+You can find POSTMAN collection here -
+
+https://documenter.getpostman.com/view/19729339/UVkpMEgQ#38bea068-cd9b-4400-a6f1-7c11ba11e87d

@@ -20,7 +20,7 @@ There are some projects for these two scope, but my main goal is to focus on Aut
 
 [100 Days of Code - The Complete Python Pro Bootcamp for 2022](https://www.udemy.com/course/100-days-of-code).
 
-# What's in the repo:
+# What's in this repo:
 
 ## 👨🏻‍🎓 Beginner
 - [Day 2](https://github.com/Kazaz-Or/100DaysOfCode-Python/tree/develop/Day02-TipCalculator) Understanding Data Types and How to Manipulate Strings
@@ -98,7 +98,7 @@ There are some projects for these two scope, but my main goal is to focus on Aut
 - [Day 95](https://github.com/Kazaz-Or/100DaysOfCode-Python/tree/develop/Day95-CustomWebsiteUsingAPI): Portfolio Project - Built a custom website using an API
 
 
-## Tools and libararies, technologies
+## Tools & libararies
 
 - Python 3
 - PyCharm, Jupyter Notebook

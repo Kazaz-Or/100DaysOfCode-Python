@@ -1,4 +1,4 @@
-#100 DaysOfCode - Days 2 - Day2-TipCalculator
+#100 DaysOfCode - Days 2 - Day02-TipCalculator
 
 print("Welcome to the tip calculator!")
 bill = float(input("What was the total bill? $"))

@@ -1,5 +1,5 @@
 <p align="center">
-<p>On my way to become a SW Engineer i used everything i can to learn and train by myself. So here's what i learned so far as part of 100 Days of Code</p>
+<p>On my way to become a SW Engineer i used everything i can to learn and train by myself. So here's what I've learned so far as part of 100 Days of Code</p>
 
 <h1 align="center">100 Days of Code - Python 🐍
     <a href="https://twitter.com/intent/tweet?&url=https://github.com/kazaz-or/100daysofcode-python&via=kazaz-or&hashtags=python,html,css,bootstrap,flask,100daysofcode,developer">
@@ -15,7 +15,7 @@
 </p>
 
 I completed the "100 Days of Code - The Complete Python Pro Bootcamp for 2022" course from Udemy. In this repo you can find most of the relevant course projects.
-Please note, that some projects are missing from this repo, as it was made for personal use, and due to the current work place i'm in and with the nature of my current career direction i decided to focus less on data science and web development at this point.
+Please note, that some projects are missing from this repo, as it was made for personal use, and due to the current work place i'm in and with the nature of my current career direction I decided to focus less on data science and web development at this point.
 There are some projects for these two scope, but my main goal is to focus on Automation testing, Infra development & Backend development.
 
 [100 Days of Code - The Complete Python Pro Bootcamp for 2022](https://www.udemy.com/course/100-days-of-code).
